@@ -1,0 +1,283 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{\thesection\ - }
+
+\usepackage{libertine}
+\usepackage{libertinust1math}
+\usepackage[T1]{fontenc}
+
+\usepackage[a4paper]{geometry}
+\usepackage{multicol}
+
+\title{Game Journal}
+\author{Isaac Boaz}
+
+\newcommand\wordcount{
+    \immediate\write18{texcount -sub=section \jobname.tex  | grep "Section" | sed -e 's/+.*//' | sed -n \thesection p > 'count.txt'}
+(\input{count.txt}words)}
+
+\renewcommand{\contentsname}{Table of Contents}
+\makeatletter
+\renewcommand\tableofcontents{%
+  \begin{center}
+  \null\textbf{\Large\contentsname}\null\par
+  \end{center}
+  \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+  \@starttoc{toc}%
+}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+\section{10/10/2024 - Risk of Rain 2}
+\begin{center}
+      \textit{Platform: PC} | \textit{Word Count: 717}
+\end{center}
+Risk of Rain 2 is a third-person roguelike game that tasks the player with
+fighting against increasingly difficult waves of enemies. While I have not
+beaten the game (yet), the game has a fairly straightforward gameplay loop.
+The game is split over multiple levels (\textasciitilde 5) in different
+settings. Each level has a teleporter that the player must find in order to
+progress to the next stage.
+
+Stages seem to be somewhat procedurally generated, though each stage in terms
+of progression has a similar `theme'. Once a player is in a world, monsters
+immediately start spawning randomly within a certain radius of the player. The
+core difficulty lies here: the player must balance killing monsters with
+finding the teleporter.
+
+Around each level there are chests or other power-ups (e.g. shrines) that the
+player must spend money to open. The player gains this money by killing
+monsters, adding an additional incentive (besides safety) to killing the
+monsters. This mechanic also introduces the idea of not immediately taking the teleporter
+before you have enough power-ups to survive the next level.
+
+Astute readers will notice that this seems similar to many RPGs, where it is
+possible to over-level oneself to easily defeat the next level / boss. Risk of
+Rain 2 disencentivizes this by having a (very visible) difficulty scale that
+slowly increases the longer you are in a level. The longer you are in a level,
+the more gold you can obtain. Risk of Rain 2 disencentivizes this by having a (very visible) difficulty scale that
+slowly increases the longer you are in a level.
+
+\subsection{Good}
+\begin{description}
+      \item[Multiple Characters] Risk of Rain 2 starts you out with 3 basic
+            characters, with at least 12 more to unlock. A major benefit to this is
+            that it allows the player to experiment with different playstyles. Some
+            players may prefer to have a gun where they can precisely point and click, whereas others may wish
+            to have a bow and arrow that auto-targets enemies for them.
+      \item[UI] The UI is clean and unobtrusive, while still providing necessary
+            information (difficulty, weapons, upgrades, etc.) Depending on the
+            character used, the UI will change to reflect the character's abilities.
+      \item[UX] The performance and graphics of the game allow for smooth gameplay
+            on reasonably powereful hardware. The game offers both a low skill
+            floor, and a high skill ceiling. Players are able to learn the attack
+            patterns of common enemies, and the teleporter has additional particle
+            effects that attentive players can use to locate it.
+      \item[Sound] Nearly every action taken within the game has an associated
+            and distinct sound to it. Different weapons sound different, enemies
+            emit sounds occasionally, and dealing damage has a clear indication.
+      \item[Multiplayer] The game supports up to 4 player multiplayer,
+            including support for `pinging' locations (e.g. teleporters, items,
+            upgrades, etc.)
+\end{description}
+\subsection{Bad}
+
+\begin{description}
+      \item[Weapon Balancing] Oftentimes characters have a `primary' attack that
+            players find themselves depending on for the majority of the game. One
+            example is a character with a shotgun that shoots bulletes in a horizontal
+            pattern. The character's secondary attack is a knife that they use to slash
+            (for close range) attacks. I have found that I very rarely use the secondary
+            attack, and the game does not seem to reward diversifying the attacks or
+            weapons that are used.
+      \item[Progression] Despite playing the game for 8+ hours, I have
+            `only' unlocked one additional character. Without wanting to spoil the
+            game, I am unsure of what potential unlockables, (permanent) upgrades,
+            or other progression mechanics the game has. This makes the game feel
+            slightly shallow at the moment, but this is partially a \emph{skill issue}.
+      \item[Difficulty] With so many characters, it does seem that some are more
+            catered to specific playstyles. In addition to `recommended' controls, it
+            would be nice to have an indication of how `easy' a character is to play,
+            including what controller would be recommended.
+            However, allowing players to experiment with the characters and have them
+            find out for themselves is also a valid design choice.
+\end{description}
+
+\subsection{Summary}
+Overall, Risk of Rain 2 is a fun third-person shooter for those who have
+\textasciitilde 30 minutes to an hour to kill. With a low skill floor and high
+skill ceiling, the game is easy to pick up and play, but difficult to master.
+
+Replayability is high thanks to the vast characters, upgrades, and randomized
+level generation.
+
+\pagebreak
+
+\section{10/17/2024 - Oxygen Not Included}
+
+\begin{center}
+      \textit{Platform: PC} | \textit{Word Count: 609}
+\end{center}
+
+Oxygen Not Included (ONI) is a 2D base-building survival game that allows the
+player to manage a group of colonists that crash landed on an asteroid.
+Management is heavily focused on resource management, including (unsurprisingly)
+oxygen. This game is similar to Factorio in terms of logistics; all resources
+have to be collected somehow, and the game leans heavily into automation and
+managing the colonists.
+
+Progression is up to the player, but the end goal is to launch a rocket (similar
+to Factorio). Since the colonists are on an asteroid, there are natural
+incentives to properly managing your resources. From waste management,
+breathable oxygen, and even avoiding heat death, ONI is an in-depth game that
+has a lot of depth.
+
+\subsection{Good}
+\begin{description}
+      \item[Introduction] Despite the name of the game, the very beginning of
+            the game \emph{does} include some oxygen. Some helpful hints and popups
+            are admittedly a lazy way to introduce the player, but they are
+            effective. The game manages a decent balance between lettings
+            players figure out what does what, while at the same time
+            introducing and explaining key mechanics.
+      \item[UX] As the game requires good resource management, the game's UX
+            allows the player to `pin' certain resources to the UI to quickly glance
+            at what resources are most important to them. Cyclic summaries and graphs
+            are also reported, allowing the player to see how their colony is doing.
+      \item[Difficulty] The game has an extremely steep learning curve, but
+            allows players to learn and understand machines within the game itself
+            through an in-game `encyclopedia'. The game also has a moderately
+            configurable difficulty setting, determining how quickly colonists
+            have to eat, how easily they get stressed, and many other factors.
+      \item[Modability] ONI supports the Steam Workshop, which allows
+            programmers to write custom mods and addons for the game. This allows
+            players that are looking for an extra challenge (or an easier time) to
+            change how they want to play the game.
+      \item[Controls] ONI keeps the controls simple with a good UX. A `priority'
+            system allows the player to easily specify granular importance over what
+            tasks should be done first. Clicking on a specific colonist also
+            shows a window with all the information about that colonist,
+            including what the current task is, and what they plan on doing next.
+\end{description}
+
+\subsection{Bad}
+\begin{description}
+      \item[Learning Curve] Though the game does its best to teach the player
+            what is what, it is still very complex. It is not uncommon for players to
+            rely on external resources (usually YouTube videos) as a guide for how to
+            get started. Even intermediate players can find a specific task confusing
+            or unclear how to accomplish.
+      \item[Progression] Similar to the above issue, the game does not have a
+            clear progression path. While the end goal is to launch a rocket, the
+            game does not provide a clear path to get there. This can be frustrating
+            for players who are looking for a clear goal to work towards. I have
+            found myself restarting the game multiple times because it was
+            unclear what the next steps are for my colony.
+      \item[Default Settings] Thanks to the game's high replayability, players
+            often will create a new game and immediately have preferences that they
+            want to enforce. It is a bit of a chore to have to change global settings
+            for the colony every time a new game is started (e.g. colony schedules).
+\end{description}
+
+\subsection{Summary}
+ONI is a fun and challenging 2D base-building survival game that allows the
+player to go as quick or as slow as they are comfortable with. The game has many
+elements to its gameplay, and in conjunction with the game's randomization and
+varying biomes, the game has a high replayability factor.
+
+\pagebreak
+
+\section{10/27/2024 - Sea of Thieves}
+
+\begin{center}
+      \textit{Platform: PC} | \textit{Word Count: 722}
+\end{center}
+
+Sea of Thieves is a first-person pirate game that tasks the player with running
+a ship, usually with a crew. The game is similar to a rouge-like in that the
+basic progression starts out at a common hub, with a few different ships
+depending on the number of players. Crews are able to choose a quest to go on,
+or simply sail around and explore the world.
+
+Throughout the adventures, players can run into random events such as krakens,
+megalodons, or other players. The game has a heavy emphasis on teamwork, where
+one player could be steering the ship, another navigating and giving directions,
+another repairing the ship, etc. In contrast to the actual ocean, the islands in
+Sea of Thieves are relatively small and clustered together.
+
+In combination with the game's great graphics and sound, Sea of Thieves is a
+great game for players who enjoy teamwork and exploration.
+
+\subsection{Good}
+\begin{description}
+      \item[Multiplayer] A core element to Sea of Thieves is the multiplayer
+            support. Cross-platform between the varying consoles and PC allows players
+            to player with their friends, regardless of what platform they are
+            on. Another great feateure is the separation of `High-Seas' and
+            private servers, allowing players to choose how they want to play.
+            High-Seas servers are public and allow for random encounters with
+            other players, whereas private servers only have the players that
+            are part of the crew. The game manages a balance in this regard by
+            having some quests that are only available on High-Seas servers.
+      \item[Communication] The game has multiple ways of communicating with your
+            crew and others, including a voice chat system, text chat, and
+            emotes. Additional diagetic methods such as what pirate flag you are
+            flying can also be used to communicate with other players what your
+            preferred playstyle is (e.g. white flag for peace, black flag for
+            war).
+      \item[Quests] A wide selection of quests allows crews to tailor which
+            quests they go on. Whether a crew prefers a heavier combat focus, puzzle
+            solving, or exploration, there are quests for everyone. A
+            combination of these quests as well as the random encounters tasks
+            everyone to do a little bit of everything.
+      \item[Graphics] Water is infamously difficult to render in games, but Sea
+            of Thieves' comical approach allows for players to not be distracted, and
+            is still very appreciable. This combined with the consistent art style and
+            solid character designs makes the game visually appealing.
+      \item[UX] Where possible the game conveys information diagetically. The
+            game's strong commitment to the pirate / sailing theme is evident in the
+            game's UI. One example is the mast, which visually blocks whoever is
+            steering the ship. The game forces players to consider what sailing
+            was like, including how crews communicated, navigated, and repaired ships.
+\end{description}
+
+\subsection{Bad}
+\begin{description}
+      \item[Progression] Due to the game being a rogue-like, progression has for
+            the most part been cosmetic. Quests offer gold which can be used to buy
+            cosmetic additions to ships, such as fancy cannon designs or sails.
+            Though I have not played the game for super long, I haven't found
+            another usage for gold yet. As long as you have friends to play with
+            I don't see this as a major issue, but for solo players, there does
+            seem to be less incentive to play.
+      \item[Combat] Combat in Sea of Thieves is fairly straight forward. Players
+            are given some cannonballs for their ships, a gun, and a sword.
+            Combat on the ship is more invovled, allowing players to use a
+            harpoon or an array of cannonballs to attack other ships. However,
+            once off the ship, combat is fairly simple.
+      \item[Exploration] Though an important aspect of the game, the exploration
+            and new discoveries the game offers seems to be lacking. While a
+            consistent art style is nice, the game's islands are fairly similar to
+            each other. This combined with most of the islands being within a 10
+            minute sailing distance makes the game feel a bit shallow.
+\end{description}
+
+\subsection{Summary}
+Sea of Thieves is a fun and engaging pirate game that is best played with a
+group of friends. The emphasis on teamwork and communication allows for involved
+roleplaying with a nice skill ceiling if playing on a High-Seas server. Quests
+that can be tailored to the crew's playstyle, and the game's great graphics and
+soundtrack make Sea of Thieves a great game for those who enjoy exploration and
+teamwork.
+
+\end{document}

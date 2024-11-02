@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb}
+\usepackage[a4paper, margin=1in]{geometry}
+
+\usepackage{libertine}
+\usepackage{libertinust1math}
+\usepackage[T1]{fontenc}
+
+\title{Lecture Exercise 2}
+\author{Isaac Boaz}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+    \item What does `set dressing' refer to in the context of building a level? \\
+          Set dressing refers to cosmetic elements that are added to a level to
+          make it more visually appealing. This includes things like props,
+          lighting, and other visual elements that do not affect gameplay.
+    \item What is a static mesh and why label some meshes as static? \\
+          A static mesh is a mesh that does not move or change during gameplay.
+          This is useful primarily for performance optimizations, especially
+          when it comes to rendering / lighting conditions.
+          By marking a mesh as static, you are telling Unity that it does not
+          need to do some computations that would be necessary if the mesh were
+          dynamic.
+    \item What is a heightmap used for?
+          A heightmap is used to represent the elevation of a terrain. It is a
+          2D array of values that represent the height of the terrain at each
+          point. This is useful for generating realistic terrain, as well as
+          for physics calculations.
+    \item How do billboards, which are 2d visuals, give the effect of a 3D
+          model? \\
+          Billboards are 2D visuals that always face the camera. This
+          gives the illusion of a 3D model because the billboard is always
+          facing the camera, so it appears to be a 3D object. This is useful
+          for things like trees, grass, and other objects that are far away
+          and do not need to be rendered in full 3D.
+    \item What is the advantage of whiteboxing environments during game
+          development? \\
+          Whiteboxing allows for easy and quick prototyping of a level or
+          game. It is also a good first step for game development, as further
+          enhancements and details (set dressing) can be iterated on top of the
+          whitebox.
+\end{enumerate}
+
+\end{document}
